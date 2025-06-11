@@ -4,10 +4,11 @@ phases:
   build:
     commands:
       - echo "⚙️ Starting build in $DEPLOY_ENV environment"
-      - if [ "$DEPLOY_ENV" = "staging" ]; then
-          echo "✅ We are in the staging environment";
+      - |
+        if [ "$DEPLOY_ENV" = "staging" ]; then
+          echo "✅ We are in the staging environment"
         elif [ "$DEPLOY_ENV" = "prod" ]; then
-          echo "✅ We are in the prod environment";
+          echo "✅ We are in the prod environment"
         else
-          echo "❌ Unknown environment: $DEPLOY_ENV";
+          echo "❌ Unknown environment: $DEPLOY_ENV"
         fi
